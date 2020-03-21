@@ -7,4 +7,8 @@
 
     <select id=""></select>
 
+    <insert id="registeredUser" parameterType="User">
+        insert  into users value (default,#{uLoginName},#{uphone},#{uAccount},#{uLoginPwd},#{uSex},#{uAddress},#{uEmail},#{uStateId},#{uCreateDate});
+    </insert>
+
 </mapper>
