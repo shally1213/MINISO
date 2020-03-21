@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /miniso
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/colorSteel
+    username: root
+    password: ok
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates
+    suffix: .html
+
+mybatis:
+  mapper-locations: classpath:/mapping/*.xml
+  type-aliases-package: com.shop.miniso.entity
+  configuration:
+    auto-mapping-behavior: full
