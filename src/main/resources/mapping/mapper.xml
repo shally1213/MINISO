@@ -5,7 +5,14 @@
 
 <mapper namespace="com.shop.miniso.dao.UserDao">
 
-    <select id=""></select>
+    <select id="login" resultType="User">
+        select * from users where (uAccount = #{uAccount} or uphone = #{uAccount}) and uLoginPwd = #{uLoginPwd}
+    </select>
+
+
+    <select id="findAll" resultType="User">
+        select * from users
+    </select>
 
     <insert id="registeredUser" parameterType="User">
         insert  into users value (default,#{uLoginName},#{uphone},#{uAccount},#{uLoginPwd},#{uSex},#{uAddress},#{uEmail},#{uStateId},#{uCreateDate});
